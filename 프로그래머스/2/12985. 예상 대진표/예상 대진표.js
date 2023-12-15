@@ -1,9 +1,9 @@
 function solution(n,a,b) {
-    let answer = 1;
-    while ((Math.floor((a-1)/2)+1) !== (Math.floor((b-1)/2)+1)) {
+    let answer = 0;
+    while (a !== b) {
         answer++;
-        a = Math.floor((a-1)/2) + 1;
-        b = Math.floor((b-1)/2) + 1;
+        a = Math.ceil(a/2);
+        b = Math.ceil(b/2);
     }
     return answer;
 }
